@@ -1,5 +1,5 @@
 /***************************************************
-ISGI::Hola Mundo
+ISGI::Hola OpenGL
 Roberto Vivo', 2016 (v1.0)
 
 Esqueleto basico de un programa en OpenGL
@@ -16,7 +16,7 @@ using namespace std;
 void display()
 // Funcion de atencion al dibujo
 {
-	glClearColor(0.0, 0.0, 0.3, 1.0);
+	glClearColor(0.0f, 0.0f, 0.3f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
 	glFlush();
 }
