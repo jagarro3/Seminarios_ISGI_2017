@@ -9,14 +9,22 @@ Dependencias:
 ***************************************************/
 #define PROYECTO "ISGI::S1E01::Hola Mundo"
 
-#include <iostream>									// Biblioteca de entrada salida
-#include <gl\freeglut.h>							// Biblioteca grafica
+#include <iostream>			
+#include <gl\freeglut.h>
 using namespace std;
+
+void init()
+// Inicializaciones
+{
+	cout << "Iniciando " << PROYECTO << endl;
+	cout << "GL version " << glGetString(GL_VERSION) << endl;
+
+	glClearColor(0.0f, 0.0f, 0.3f, 1.0f);
+}
 
 void display()
 // Funcion de atencion al dibujo
 {
-	glClearColor(0.0f, 0.0f, 0.3f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
 	glFlush();
 }
@@ -29,12 +37,17 @@ void reshape(GLint w, GLint h)
 void main(int argc, char** argv)
 // Programa principal
 {
-	glutInit(&argc, argv);								// Inicializacion de GLUT
-	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);		// Alta de buffers a usar
-	glutInitWindowSize(600, 400);						// Tamanyo inicial de la ventana
-	glutCreateWindow(PROYECTO);							// Creacion de la ventana con su titulo
-	cout << PROYECTO << " en marcha" << endl;			// Mensaje por consola
-	glutDisplayFunc(display);							// Alta de la funcion de atencion a display
-	glutReshapeFunc(reshape);							// Alta de la funcion de atencion a reshape
-	glutMainLoop();										// Puesta en marcha del programa
+	// Inicializaciones
+	glutInit(&argc, argv);								
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);		
+	glutInitWindowSize(600, 400);						
+	glutCreateWindow(PROYECTO);	
+	init();
+
+	// Registro de callbacks	
+	glutDisplayFunc(display);							
+	glutReshapeFunc(reshape);	
+
+	// Bucle de atencion a eventos
+	glutMainLoop();										
 }
