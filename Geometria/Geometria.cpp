@@ -7,7 +7,7 @@ Dibujar formas basicas en OpenGL
 Dependencias:
 +freeglut +utilidades
 ***************************************************/
-#define PROYECTO "ISGI::S1E01::Hola Mundo"
+#define PROYECTO "ISGI::S2E01::Geometria"
 
 #include <iostream>									// Biblioteca de entrada salida
 //#include <gl\freeglut.h>	// Biblioteca grafica
