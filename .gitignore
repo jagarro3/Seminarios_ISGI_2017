@@ -69,6 +69,7 @@ artifacts/
 *.svclog
 *.scc
 *.ipdb
+*.iobj
 
 # Chutzpah Test files
 _Chutzpah*
