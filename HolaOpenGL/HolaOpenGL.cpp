@@ -1,16 +1,17 @@
 /***************************************************
 ISGI::Hola OpenGL
-Roberto Vivo', 2016 (v1.0)
+Roberto Vivo', 2017 (v1.0)
 
 Esqueleto basico de un programa en OpenGL
 
 Dependencias:
 +freeglut
 ***************************************************/
-#define PROYECTO "ISGI::S1E01::Hola Mundo"
+#define PROYECTO "ISGI::S1E01::Hola OpenGL"
 
 #include <iostream>			
-#include <gl\freeglut.h>
+#include <gl/freeglut.h>
+
 using namespace std;
 
 void init()
